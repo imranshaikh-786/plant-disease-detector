@@ -1,6 +1,6 @@
 import streamlit as st
 import numpy as np
-import tflite_runtime.interpreter as tflite
+import tensorflow as tf
 from PIL import Image
 
 class_names = ['Apple Scab Leaf', 
@@ -18,7 +18,7 @@ class_names = ['Apple Scab Leaf',
 
 @st.cache_resource
 def load_model():
-    interpreter = tflite.Interpreter(model_path="plant_disease_model.tflite")
+    interpreter = tf.lite.Interpreter(model_path="plant_disease_model.tflite")
     interpreter.allocate_tensors()
     return interpreter
 
