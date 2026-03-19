@@ -82,7 +82,7 @@ The system is deployed as an **interactive web application**, enabling users to 
 
 ### 🔗 Live Demo
 
-👉 *(Add your deployed app link here)*
+👉 https://plant-disease-detector-xccxud2rbt2gmdb5imvj3u.streamlit.app/
 
 ---
 
@@ -110,7 +110,6 @@ plant-disease-detector/
 ├── app.py
 ├── plant_disease_model.tflite
 ├── requirements.txt
-├── runtime.txt
 └── README.md
 ```
 
@@ -143,8 +142,8 @@ plant-disease-detector/
 🎓 M.S. in AI & ML
 💻 Interested in Machine Learning, Deep Learning, and AI Applications
 
-📧 *(Add your email)*
-🔗 *(Add LinkedIn / Portfolio)*
+📧 imran.sha0ikh@gmail.com
+🔗 https://www.linkedin.com/in/imran-shaikh-3b904b224/
 
 ---
 
