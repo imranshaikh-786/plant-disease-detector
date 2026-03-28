@@ -73,7 +73,7 @@ if uploaded_file is not None:
     top_3 = np.argsort(preds_1d)[-3:][::-1]
 
     for i in top_3:
-        st.write(f"{class_names[i]}: {predictions[i]*100:.2f}%")
+        st.write(f"{class_names[i]}: {preds_1d[i]*100:.2f}%")
 
     if confidence < 0.5:
         st.warning("⚠️ Low confidence prediction. Try a clearer image.")
