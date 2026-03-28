@@ -69,7 +69,8 @@ if uploaded_file is not None:
 
     # Top 3
     st.subheader("Top Predictions:")
-    top_3 = np.argsort(predictions)[-3:][::-1]
+    preds_1d = predictions[0] 
+    top_3 = np.argsort(preds_1d)[-3:][::-1]
 
     for i in top_3:
         st.write(f"{class_names[i]}: {predictions[i]*100:.2f}%")
