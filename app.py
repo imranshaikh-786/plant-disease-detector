@@ -69,13 +69,15 @@ if uploaded_file is not None:
     st.success(f"Prediction: {prediction}")
     st.info(f"Confidence: {confidence * 100:.2f}%")
 
-    # Top 3
-    st.subheader("Top Predictions:")
-    preds_1d = predictions[0] 
-    top_3 = np.argsort(preds_1d)[-3:][::-1]
+    if prediction == "Healthy":
+        st.balloons()
+    else:
+        # Top 3
+        st.subheader("Possible diseases (top 3):")
+        top_3 = np.argsort(predictions)[-3:][::-1]
 
-    for i in top_3:
-        st.write(f"{class_names[i]}: {preds_1d[i]*100:.2f}%")
+        for i in top_3:
+            st.write(f"{class_names[i]}: {predictions[i]*100:.2f}%")
 
     if confidence < 0.5:
         st.warning("⚠️ Low confidence prediction. Try a clearer image.")
