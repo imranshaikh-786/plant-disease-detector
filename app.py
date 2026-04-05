@@ -64,7 +64,7 @@ if uploaded_file is not None:
     predicted_class = np.argmax(predictions)
     confidence = np.max(predictions)
 
-    prediction = class_names[predicted_class] if predicted_class != 3 else "Healthy"
+    prediction = "Disease Infected" if predicted_class != 3 else "Healthy"
 
     st.success(f"Prediction: {prediction}")
     st.info(f"Confidence: {confidence * 100:.2f}%")
