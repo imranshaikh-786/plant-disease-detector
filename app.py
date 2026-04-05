@@ -70,7 +70,8 @@ if uploaded_file is not None:
     st.info(f"Confidence: {confidence * 100:.2f}%")
 
     if prediction == "Healthy":
-        st.balloons()
+        # st.balloons()
+        pass
     else:
         # Top 3
         st.subheader("Possible diseases (top 3):")
