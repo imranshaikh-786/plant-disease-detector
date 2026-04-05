@@ -62,6 +62,8 @@ if uploaded_file is not None:
         predictions = predict(image)
 
     predicted_class = np.argmax(predictions)
+    confidence = np.max(predictions)
+
     prediction = class_names[predicted_class] if predicted_class != 3 else "Healthy"
 
     st.success(f"Prediction: {prediction}")
